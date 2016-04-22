@@ -30,12 +30,13 @@ Tests are grouped in application folders which include following assets:
 - Initialize catalog media by running ``media.sh``
 - [Install](http://gatling.io/docs/2.2.0/quickstart.html#installing) Gatling
 - Run gatling scenario using following options
+
 | Option |	Description | Default Value |
-|--------|-------------|----------------|
-| dataDir | Data directory used in test scenarios | magento | 
+|--------|--------------|---------------|
+| dataDir | Data directory used in test scenarios | magento |
 | users	 | The number of concurrent users | 20 |
 | ramp | Increase load to number of users in, sec | 30 |
 | during | Run test during period, minutes | 10 |
-| domain | Testing domain name | magento.test.com | 
+| domain | Testing domain name | magento.test.com |
 | useSecure | Use HTTPS for secure pages | 0 |
-| project | Project Name for Report | Magento | 
+| project | Project Name for Report | Magento |
