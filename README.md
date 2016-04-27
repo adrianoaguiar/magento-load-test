@@ -47,3 +47,13 @@ Tests are grouped in application folders which include following assets:
 $ JAVA_OPTS="-Ddomain=www.mXce.com -Dusers=10"
 $ gatling -s mX.defaultFrontTest
 ```
+
+## Magento2 Pre Test Setup
+
+1. Page load time optimization: build JS, enable JS minification, enable CSS minification
+2. Deploy static content: ``php bin/magento setup:static-content:deploy``
+3. Run compiler: ``php bin/magento setup:di:compile``
+4. Enable production mode: ``Set $MAGE_MODE production`` 
+5. Reindex catalog: ``php bin/magento indexer:reindex``
+6. Cleaning cache: ``php bin/magento cache:clean``
+
