@@ -1,25 +1,18 @@
 #!/usr/bin/env bash
 
-if [ $# -lt 4 ]; then
-    echo "Usage: ./media.sh version magento_root_path media_set_file media_path"
+if [ $# -lt 3 ]; then
+    echo "Usage: ./media.sh magento_root_path media_set_file media_path"
     echo ""
     echo "Examples:"
-    echo "  ./media.sh m1 /var/www/html media.set /path/to/media";
-    echo "  ./media.sh m2 /var/www/html media.set /path/to/media";
+    echo "  ./media.sh /var/www/html media.set /path/to/media";
     exit 1;
 fi
 
-MAGE_VER=$1
-MAGE_PATH=$2
-IMG_INPUT=$3
-IMG_SOURCE=$4
+MAGE_PATH=$1
+IMG_INPUT=$2
+IMG_SOURCE=$3
 
 check_args () {
-    if [ "${MAGE_VER}" != "m1" ] && [ "${MAGE_VER}" != "m2" ]; then
-        echo "ERROR: Entered incorrect Magento version";
-        exit 1;
-    fi
-
     if [ ! -d ${MAGE_PATH} ]; then
         echo "ERROR: Entered Magento root directory is not exists";
         exit 1;
@@ -41,11 +34,7 @@ check_args () {
 process () {
     while IFS= read -r IMG_FILE
     do
-        if [ "${MAGE_VER}" == "m1" ]; then
-            MEDIA_PATH="${MAGE_PATH}/media"
-        else
-            MEDIA_PATH="${MAGE_PATH}/pub/media"
-        fi
+        MEDIA_PATH="${MAGE_PATH}/media"
         IMG_PATH="${MEDIA_PATH}/catalog/product${IMG_FILE:0:4}"
         if [ ! -d "${IMG_PATH}" ]; then
             mkdir -p ${IMG_PATH}
