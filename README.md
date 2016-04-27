@@ -27,16 +27,23 @@ Tests are grouped in application folders which include following assets:
 
 - Create database and import dump from data.sql.gz of proper application
 - Install Magento application using database created on the previous step
-- Initialize catalog media by running ``media.sh``
+- Copy ``media`` directory, ``media.set`` and ``media.sh`` script to some directory
+- Run ``media.sh /path/to/magento_pub /path/to/media.set /path/to/source_media`` for creates product media file symlinks
 - [Install](http://gatling.io/docs/2.2.0/quickstart.html#installing) Gatling
+- Copy files from `gatling` directory to gatling `user-files` directory
 - Run gatling scenario using following options
 
-| Option |	Description | Default Value |
-|--------|--------------|---------------|
-| dataDir | Data directory used in test scenarios | magento |
-| users	 | The number of concurrent users | 20 |
+| Option | Description | Default Value |
+| --- | --- | --- |
+| dataDir | Data directory used in test scenarios | mXce |
+| users | The number of concurrent users | 20 |
 | ramp | Increase load to number of users in, sec | 30 |
 | during | Run test during period, minutes | 10 |
 | domain | Testing domain name | magento.test.com |
 | useSecure | Use HTTPS for secure pages | 0 |
 | project | Project Name for Report | Magento |
+
+```console
+$ JAVA_OPTS="-Ddomain=www.mXce.com -Dusers=10"
+$ gatling -s mX.defaultFrontTest
+```
