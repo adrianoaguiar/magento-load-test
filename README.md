@@ -1,6 +1,6 @@
 # Load Test Scenarios for Magento 1 and Magento 2
 
-This scenarios were used to perform load test for Magento 1 and Magento 2 applications in different environments.
+These scenarios were used to perform load tests for Magento 1 and Magento 2 applications in different environments.
 Results are publicly available on [MageCore blog](https://www.magecore.com/blog):
 
 - [Magento CE 1.9 vs Magento CE 2.0 Performance Comparison](https://www.magecore.com/blog/news/magento-ce-1-9-vs-magento-ce-2-0-performance-comparison)
@@ -9,10 +9,10 @@ Results are publicly available on [MageCore blog](https://www.magecore.com/blog)
 ## Repository Structure
 
 Tests are grouped in application folders which include following assets:
-- media - image files used for catalog products
-- media.sh - script that initialize application media based on catalog and images from media folder
-- data.sql.gz - database dump
-- gatling - load test scenarios for [Gatling](http://gatling.io/) load testing framework
+- ``media`` - image files used for catalog products
+- ``media.sh`` - script that initializes application media based on catalog and images from media folder
+- ``data.sql.gz`` - database dump
+- ``gatling`` - load test scenarios for [Gatling](http://gatling.io/) load testing framework
 
 ## Environment Configuration
 
@@ -25,13 +25,13 @@ Tests are grouped in application folders which include following assets:
 
 ## Setup instructions
 
-- Create database and import dump from data.sql.gz of proper application
+- Create database and import dump from ``data.sql.gz`` of proper application
 - Install Magento application using database created on the previous step
 - Copy ``media`` directory, ``media.set`` and ``media.sh`` script to some directory
 - Run ``media.sh /path/to/magento_pub /path/to/media.set /path/to/source_media`` to initialize product images
 - [Install](http://gatling.io/docs/2.2.0/quickstart.html#installing) Gatling
 - Copy files from `magento1/gatling` and `magento2/gatling` directories to gatling `user-files` directory
-- Run gatling scenario using following options. Please use m1 or m2 instead mX in the parameters bellow
+- Run gatling scenario using following options (please use m1 or m2 instead mX in the parameters bellow):
 
 | Option | Description | Default Value |
 | --- | --- | --- |
