@@ -55,5 +55,5 @@ $ gatling -s mX.defaultFrontTest
 3. Run compiler: ``php bin/magento setup:di:compile``
 4. Enable production mode: ``Set $MAGE_MODE production`` 
 5. Reindex catalog: ``php bin/magento indexer:reindex``
-6. Cleaning cache: ``php bin/magento cache:clean``
+6. Clean cache: ``php bin/magento cache:clean``
 
