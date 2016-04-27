@@ -30,8 +30,8 @@ Tests are grouped in application folders which include following assets:
 - Copy ``media`` directory, ``media.set`` and ``media.sh`` script to some directory
 - Run ``media.sh /path/to/magento_pub /path/to/media.set /path/to/source_media`` to initialize product images
 - [Install](http://gatling.io/docs/2.2.0/quickstart.html#installing) Gatling
-- Copy files from `gatling` directory to gatling `user-files` directory
-- Run gatling scenario using following options
+- Copy files from `magento1/gatling` and `magento2/gatling` directories to gatling `user-files` directory
+- Run gatling scenario using following options. Please use m1 or m2 instead mX in the parameters bellow
 
 | Option | Description | Default Value |
 | --- | --- | --- |
