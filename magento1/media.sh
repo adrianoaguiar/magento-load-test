@@ -3,7 +3,7 @@
 if [ $# -lt 3 ]; then
     echo "Usage: ./media.sh magento_root_path media_set_file media_path"
     echo ""
-    echo "Examples:"
+    echo "Example:"
     echo "  ./media.sh /var/www/html media.set /path/to/media";
     exit 1;
 fi
@@ -14,17 +14,17 @@ IMG_SOURCE=$3
 
 check_args () {
     if [ ! -d ${MAGE_PATH} ]; then
-        echo "ERROR: Entered Magento root directory is not exists";
+        echo "ERROR: Entered Magento root directory does not exist";
         exit 1;
     fi
 
     if [ ! -f ${IMG_INPUT} ]; then
-        echo "ERROR: Entered media set file is not exists";
+        echo "ERROR: Entered media set file does not exist";
         exit 1;
     fi
 
     if [ ! -d ${IMG_SOURCE} ]; then
-        echo "ERROR: Entered media directory is not exists";
+        echo "ERROR: Entered media directory does not exist";
         exit 1;
     fi
 

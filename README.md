@@ -28,7 +28,7 @@ Tests are grouped in application folders which include following assets:
 - Create database and import dump from data.sql.gz of proper application
 - Install Magento application using database created on the previous step
 - Copy ``media`` directory, ``media.set`` and ``media.sh`` script to some directory
-- Run ``media.sh /path/to/magento_pub /path/to/media.set /path/to/source_media`` for creates product media file symlinks
+- Run ``media.sh /path/to/magento_pub /path/to/media.set /path/to/source_media`` to initialize product images
 - [Install](http://gatling.io/docs/2.2.0/quickstart.html#installing) Gatling
 - Copy files from `gatling` directory to gatling `user-files` directory
 - Run gatling scenario using following options
